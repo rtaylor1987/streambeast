@@ -21,7 +21,8 @@ from trakt import Trakt
 from vod import KINDS, TMDB, art, matches, metadata, stremio_sources
 
 TITLES = {"movies": "Movies", "tv": "TV", "sports": "Sports"}
-BASE_URL, handle, query = sys.argv
+# Kodi appends a fourth argument indicating whether playback should resume.
+BASE_URL, handle, query = sys.argv[:3]
 HANDLE = int(handle)
 ADDON = xbmcaddon.Addon()
 
