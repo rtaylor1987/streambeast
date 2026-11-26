@@ -9,7 +9,7 @@ StreamBeast is a Kodi video add-on for movies, TV episodes, and sports. Its opti
 3. Install the skin ZIP under `dist/skin.streambeast`. Enable **StreamBeast Skin** under **Settings → Interface → Skin**.
 4. Open **StreamBeast settings** and enter the URL or local path of each provider catalog. Open the StreamBeast video add-on to use **Connect Trakt**.
 
-The video add-on also works independently in Kodi's Video add-ons menu. For remote distribution, run `py tools/package.py --base-url <your HTTPS repository URL>`, publish the contents of `dist/repository` at that URL, and distribute `dist/repository.streambeast-0.1.0.zip`. The repository ZIP points at that host.
+The video add-on also works independently in Kodi's Video add-ons menu. For remote distribution, run `py tools/package.py --base-url <your HTTPS repository URL>`, publish the contents of `dist/repository` at that URL, and distribute `dist/repository.streambeast-0.1.1.zip`. The repository ZIP points at that host.
 
 ## Movies, TV, and streaming services
 

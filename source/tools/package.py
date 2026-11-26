@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "dist"
 ADDONS = ("plugin.video.streambeast", "skin.streambeast")
+REPOSITORY_VERSION = "0.1.1"
 
 
 def metadata(folder):
@@ -46,17 +47,18 @@ def build_repository(base_url, addons):
     index = ET.tostring(root, encoding="utf-8", xml_declaration=True)
     (output / "addons.xml").write_bytes(index)
     (output / "addons.xml.md5").write_text(hashlib.md5(index).hexdigest(), encoding="ascii")
+    (output / "addons.xml.sha256").write_text(hashlib.sha256(index).hexdigest(), encoding="ascii")
     repo = ET.Element("addon", id="repository.streambeast", name="StreamBeast Repository",
-                      version="0.1.0", attrib={"provider-name": "StreamBeast"})
+                      version=REPOSITORY_VERSION, attrib={"provider-name": "StreamBeast"})
     extension = ET.SubElement(repo, "extension", point="xbmc.addon.repository")
     directory = ET.SubElement(extension, "dir")
     ET.SubElement(directory, "info", compressed="false").text = base_url + "addons.xml"
-    ET.SubElement(directory, "checksum").text = base_url + "addons.xml.md5"
+    ET.SubElement(directory, "checksum", verify="sha256").text = base_url + "addons.xml.sha256"
     ET.SubElement(directory, "datadir", zip="true").text = base_url.rstrip("/")
     meta = ET.SubElement(repo, "extension", point="xbmc.addon.metadata")
     ET.SubElement(meta, "summary", lang="en_GB").text = "StreamBeast add-on and skin"
     ET.SubElement(meta, "platform").text = "all"
-    installer = OUTPUT / "repository.streambeast-0.1.0.zip"
+    installer = OUTPUT / ("repository.streambeast-" + REPOSITORY_VERSION + ".zip")
     write_zip(ROOT / "repository.streambeast", installer,
               ET.tostring(repo, encoding="utf-8", xml_declaration=True))
     copyfile(installer, output / installer.name)
