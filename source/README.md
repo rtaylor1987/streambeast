@@ -21,6 +21,8 @@ The video add-on also works independently in Kodi's Video add-ons menu. For remo
 
 ## Providers
 
+With **The Crew** installed and enabled in Kodi, StreamBeast Sports can open The Crew's live sports directories directly. The Crew supplies its current listings, resolves streams, and handles playback. Its menus may still include provider selection. When StreamBeast has no sports catalog, the Crew sport shortcuts appear directly in Sports. If you configure a catalog, use **Sports → The Crew sports** to reach the same shortcuts. StreamBeast's own game-first ranking applies to its configured feeds.
+
 StreamBeast accepts up to four configured JSON feeds plus an optional `catalog.json` in the add-on profile directory. Feed operators supply schedules, artwork, and playback links they are authorized to distribute. The repository includes no provider subscriptions or live feeds. Sports has **Live now**, **Upcoming games**, **Replays**, and per-sport game lists. The skin shows live events on Home.
 
 Each catalog is an object with an `items` array. The following structural example uses placeholder URLs.

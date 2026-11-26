@@ -21,6 +21,16 @@ from trakt import Trakt
 from vod import KINDS, TMDB, art, matches, metadata, stremio_sources
 
 TITLES = {"movies": "Movies", "tv": "TV", "sports": "Sports"}
+CREW_ID = "plugin.video.thecrew"
+CREW_SPORTS = (
+    ("All sports and live sites", "bluehat"),
+    ("NFL", "nfl"), ("NHL", "nhl"), ("NBA", "nba"), ("MLB", "mlb"),
+    ("College football", "ncaa"), ("College basketball", "ncaab"),
+    ("UFC", "ufc"), ("WWE", "wwe"), ("Boxing", "boxing"),
+    ("Soccer", "fifa"), ("Tennis", "tennis"), ("MotoGP", "motogp"),
+    ("Formula 1", "f1"), ("Golf", "pga"), ("NASCAR", "nascar"),
+    ("Sports replays", "sreplays"),
+)
 # Kodi appends a fourth argument indicating whether playback should resume.
 BASE_URL, handle, query = sys.argv[:3]
 HANDLE = int(handle)
@@ -148,6 +158,15 @@ def show_history(widget=False):
         notify("Partially watched movies and episodes will appear here.")
 
 
+def show_crew_sports():
+    if not xbmc.getCondVisibility("System.HasAddon({})".format(CREW_ID)):
+        row("Set up The Crew", False, action="crew_setup")
+        return
+    for title, action in CREW_SPORTS:
+        target = "plugin://{}/?{}".format(CREW_ID, urlencode({"action": action}))
+        xbmcplugin.addDirectoryItem(HANDLE, target, xbmcgui.ListItem(label=title), True)
+
+
 def show_sports(items, params):
     sport = params.get("sport")
     status = params.get("status")
@@ -155,7 +174,12 @@ def show_sports(items, params):
     now = datetime.now(timezone.utc)
     order = {"Live": 0, "Upcoming": 1, "Replay": 2}
     xbmcplugin.setPluginCategory(HANDLE, status or "Sports")
+    if not items and not widget:
+        show_crew_sports()
+        row("Sports catalog settings", False, action="settings")
+        return
     if not sport and not status:
+        row("The Crew sports", action="crew_sports")
         for name in order:
             row("Live now" if name == "Live" else name + (" games" if name == "Upcoming" else "s"),
                 action="browse", kind="sports", status=name)
@@ -374,6 +398,12 @@ def main():
         ADDON.openSettings()
     elif action == "history":
         show_history(params.get("widget") == "1")
+    elif action == "crew_sports":
+        xbmcplugin.setPluginCategory(HANDLE, "The Crew sports")
+        show_crew_sports()
+    elif action == "crew_setup":
+        xbmcgui.Dialog().ok("The Crew sports",
+                            "Install and enable The Crew video add-on in Kodi, then reopen Sports.")
     elif action == "watchlist" and params.get("widget") == "1" and not ADDON.getSetting("trakt_access"):
         pass
     elif action == "connect":
@@ -432,7 +462,7 @@ def main():
                     item["sources"].extend(external_sources(data))
             play(item, params)
             return
-        if not locations and not widget:
+        if not locations and not widget and kind != "sports":
             row("Set up a provider catalog", False, action="settings")
         elif failures and not widget:
             notify("{} provider catalog(s) unavailable.".format(failures))
