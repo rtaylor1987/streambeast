@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="plugin.video.streambeast" name="StreamBeast" version="0.3.0" provider-name="StreamBeast">
+  <requires><import addon="xbmc.python" version="3.0.0" /></requires>
+  <extension point="xbmc.python.pluginsource" library="default.py"><provides>video</provides></extension>
+  <extension point="xbmc.service" library="service.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Movies, TV, and game-first sports playback</summary>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="skin.streambeast" version="0.3.0" name="StreamBeast Skin" provider-name="StreamBeast, phil65, Ichabod Fletchman">
+  <requires>
+    <import addon="xbmc.gui" version="5.17.0" />
+    <import addon="plugin.video.streambeast" version="0.3.0" />
+  </requires>
+  <extension point="xbmc.gui.skin" debugging="false">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A dark home screen with direct access to your StreamBeast catalogs</summary>
+    <description lang="en_GB">StreamBeast Home and palette with Kodi Estuary settings, dialogs, and player controls.</description>
+    <platform>all</platform>
+    <license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
+    <assets><icon>media/streambeast/icon.png</icon><fanart>media/streambeast/backdrop.png</fanart></assets>
+  </extension>
+</addon></addons>

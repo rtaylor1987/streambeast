@@ -1,0 +1,88 @@
+msgid ""
+msgstr ""
+"Language: en_GB\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgctxt "#30000"
+msgid "Provider catalogs"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Provider catalog 1 URL or path"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Provider catalog 2 URL or path"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Provider catalog 3 URL or path"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Provider catalog 4 URL or path"
+msgstr ""
+
+msgctxt "#30005"
+msgid "On-demand provider endpoint URL"
+msgstr ""
+
+msgctxt "#30010"
+msgid "Accounts"
+msgstr ""
+
+msgctxt "#30011"
+msgid "Real-Debrid API token"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Trakt client ID"
+msgstr ""
+
+msgctxt "#30013"
+msgid "Trakt client secret"
+msgstr ""
+
+msgctxt "#30014"
+msgid "Connect Trakt"
+msgstr ""
+
+msgctxt "#30020"
+msgid "Movies and TV"
+msgstr ""
+
+msgctxt "#30021"
+msgid "TMDB API read access token"
+msgstr ""
+
+msgctxt "#30022"
+msgid "Streaming availability country code"
+msgstr ""
+
+msgctxt "#30023"
+msgid "Stremio provider 1 manifest URL"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Stremio provider 2 manifest URL"
+msgstr ""
+
+msgctxt "#30025"
+msgid "Stremio provider 3 manifest URL"
+msgstr ""
+
+msgctxt "#30026"
+msgid "Use installed CocoScrapers for Real-Debrid cloud matches"
+msgstr ""
+
+msgctxt "#30030"
+msgid "Playback"
+msgstr ""
+
+msgctxt "#30031"
+msgid "Maximum advertised vertical resolution"
+msgstr ""
+
+msgctxt "#30032"
+msgid "Prefer HDR at the same resolution"
+msgstr ""

@@ -1,0 +1,441 @@
+<?xml version='1.0' encoding='utf-8'?>
+<window>
+  <defaultcontrol>101</defaultcontrol>
+  <backgroundcolor>background</backgroundcolor>
+  <controls>
+    <control type="image">
+      <include>FullScreenDimensions</include>
+      <texture>streambeast/backdrop.png</texture>
+    </control>
+    <control type="label">
+      <left>100</left>
+      <top>40</top>
+      <width>800</width>
+      <height>60</height>
+      <font>font36_title</font>
+      <textcolor>FFF48270</textcolor>
+      <align>left</align>
+      <label>STREAMBEAST</label>
+    </control>
+    <control type="label">
+      <left>1500</left>
+      <top>40</top>
+      <width>320</width>
+      <height>60</height>
+      <font>font27</font>
+      <textcolor>FFDDD9E2</textcolor>
+      <align>right</align>
+      <label>$INFO[System.Time]</label>
+    </control>
+    <control type="button" id="101">
+      <left>100</left>
+      <top>120</top>
+      <width>552</width>
+      <height>82</height>
+      <label>Sports</label>
+      <font>font32_title</font>
+      <align>left</align>
+      <aligny>center</aligny>
+      <textoffsetx>32</textoffsetx>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF24232D">buttons/button-fo.png</texturenofocus>
+      <onup>101</onup>
+      <ondown>301</ondown>
+      <onleft>103</onleft>
+      <onright>102</onright>
+      <onclick>ActivateWindow(Videos,"plugin://plugin.video.streambeast/?action=browse&amp;kind=sports",return)</onclick>
+    </control>
+    <control type="button" id="102">
+      <left>684</left>
+      <top>120</top>
+      <width>552</width>
+      <height>82</height>
+      <label>Movies</label>
+      <font>font32_title</font>
+      <align>left</align>
+      <aligny>center</aligny>
+      <textoffsetx>32</textoffsetx>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF24232D">buttons/button-fo.png</texturenofocus>
+      <onup>102</onup>
+      <ondown>301</ondown>
+      <onleft>101</onleft>
+      <onright>103</onright>
+      <onclick>ActivateWindow(Videos,"plugin://plugin.video.streambeast/?action=browse&amp;kind=movies",return)</onclick>
+    </control>
+    <control type="button" id="103">
+      <left>1268</left>
+      <top>120</top>
+      <width>552</width>
+      <height>82</height>
+      <label>TV</label>
+      <font>font32_title</font>
+      <align>left</align>
+      <aligny>center</aligny>
+      <textoffsetx>32</textoffsetx>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF24232D">buttons/button-fo.png</texturenofocus>
+      <onup>103</onup>
+      <ondown>301</ondown>
+      <onleft>102</onleft>
+      <onright>101</onright>
+      <onclick>ActivateWindow(Videos,"plugin://plugin.video.streambeast/?action=browse&amp;kind=tv",return)</onclick>
+    </control>
+    <control type="button" id="201">
+      <left>100</left>
+      <top>945</top>
+      <width>328</width>
+      <height>74</height>
+      <label>Streaming services</label>
+      <font>font25_title</font>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <onup>303</onup>
+      <ondown>201</ondown>
+      <onleft>206</onleft>
+      <onright>203</onright>
+      <onclick>ActivateWindow(Videos,"plugin://plugin.video.streambeast/?action=services",return)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF1B1A22">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="button" id="203">
+      <left>448</left>
+      <top>945</top>
+      <width>328</width>
+      <height>74</height>
+      <label>StreamBeast settings</label>
+      <font>font25_title</font>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <onup>303</onup>
+      <ondown>203</ondown>
+      <onleft>201</onleft>
+      <onright>204</onright>
+      <onclick>Addon.OpenSettings(plugin.video.streambeast)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF1B1A22">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="button" id="204">
+      <left>796</left>
+      <top>945</top>
+      <width>328</width>
+      <height>74</height>
+      <label>Kodi library</label>
+      <font>font25_title</font>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <onup>303</onup>
+      <ondown>204</ondown>
+      <onleft>203</onleft>
+      <onright>205</onright>
+      <onclick>ActivateWindow(Videos,root,return)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF1B1A22">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="button" id="205">
+      <left>1144</left>
+      <top>945</top>
+      <width>328</width>
+      <height>74</height>
+      <label>Kodi settings</label>
+      <font>font25_title</font>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <onup>303</onup>
+      <ondown>205</ondown>
+      <onleft>204</onleft>
+      <onright>206</onright>
+      <onclick>ActivateWindow(Settings)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF1B1A22">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="button" id="206">
+      <left>1492</left>
+      <top>945</top>
+      <width>328</width>
+      <height>74</height>
+      <label>Power</label>
+      <font>font25_title</font>
+      <align>center</align>
+      <aligny>center</aligny>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <onup>303</onup>
+      <ondown>206</ondown>
+      <onleft>205</onleft>
+      <onright>201</onright>
+      <onclick>ActivateWindow(shutdownmenu)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF1B1A22">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="button" id="301">
+      <left>100</left>
+      <top>235</top>
+      <width>343</width>
+      <height>50</height>
+      <label>Live now</label>
+      <font>font27</font>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <align>left</align>
+      <aligny>center</aligny>
+      <textoffsetx>14</textoffsetx>
+      <onup>101</onup>
+      <ondown>302</ondown>
+      <onleft>301</onleft>
+      <onright condition="Integer.IsGreater(Container(401).NumItems,0)">401</onright>
+      <onclick>ActivateWindow(Videos,"plugin://plugin.video.streambeast/?action=browse&amp;kind=sports&amp;status=Live",return)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF24232D">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="list" id="401">
+      <left>100</left>
+      <top>292</top>
+      <width>1720</width>
+      <height>151</height>
+      <orientation>horizontal</orientation>
+      <onup>301</onup>
+      <ondown>302</ondown>
+      <onleft>301</onleft>
+      <onright>401</onright>
+      <scrolltime>160</scrolltime>
+      <itemlayout width="344" height="150">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>327</width>
+          <height>145</height>
+          <texture border="21" colordiffuse="FF2B2936">buttons/button-fo.png</texture>
+        </control>
+        <control type="image">
+          <left>6</left>
+          <top>5</top>
+          <width>315</width>
+          <height>92</height>
+          <aspectratio>scale</aspectratio>
+          <texture background="true" fallback="$INFO[ListItem.Art(poster)]">$INFO[ListItem.Art(thumb)]</texture>
+        </control>
+        <control type="label">
+          <left>13</left>
+          <top>97</top>
+          <width>295</width>
+          <height>42</height>
+          <font>font25_title</font>
+          <textcolor>white</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </itemlayout>
+      <focusedlayout width="344" height="150">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>327</width>
+          <height>145</height>
+          <texture border="21" colordiffuse="button_focus">buttons/button-fo.png</texture>
+        </control>
+        <control type="image">
+          <left>6</left>
+          <top>5</top>
+          <width>315</width>
+          <height>92</height>
+          <aspectratio>scale</aspectratio>
+          <texture background="true" fallback="$INFO[ListItem.Art(poster)]">$INFO[ListItem.Art(thumb)]</texture>
+        </control>
+        <control type="label">
+          <left>13</left>
+          <top>97</top>
+          <width>295</width>
+          <height>42</height>
+          <font>font25_title</font>
+          <textcolor>white</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </focusedlayout>
+      <content target="videos" limit="8">plugin://plugin.video.streambeast/?action=browse&amp;kind=sports&amp;status=Live&amp;widget=1</content>
+    </control>
+    <control type="button" id="302">
+      <left>100</left>
+      <top>465</top>
+      <width>343</width>
+      <height>50</height>
+      <label>Continue watching</label>
+      <font>font27</font>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <align>left</align>
+      <aligny>center</aligny>
+      <textoffsetx>14</textoffsetx>
+      <onup>301</onup>
+      <ondown>303</ondown>
+      <onleft>302</onleft>
+      <onright condition="Integer.IsGreater(Container(402).NumItems,0)">402</onright>
+      <onclick>ActivateWindow(Videos,"plugin://plugin.video.streambeast/?action=history",return)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF24232D">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="list" id="402">
+      <left>100</left>
+      <top>522</top>
+      <width>1720</width>
+      <height>151</height>
+      <orientation>horizontal</orientation>
+      <onup>302</onup>
+      <ondown>303</ondown>
+      <onleft>302</onleft>
+      <onright>402</onright>
+      <scrolltime>160</scrolltime>
+      <itemlayout width="344" height="150">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>327</width>
+          <height>145</height>
+          <texture border="21" colordiffuse="FF2B2936">buttons/button-fo.png</texture>
+        </control>
+        <control type="image">
+          <left>6</left>
+          <top>5</top>
+          <width>315</width>
+          <height>92</height>
+          <aspectratio>scale</aspectratio>
+          <texture background="true" fallback="$INFO[ListItem.Art(poster)]">$INFO[ListItem.Art(thumb)]</texture>
+        </control>
+        <control type="label">
+          <left>13</left>
+          <top>97</top>
+          <width>295</width>
+          <height>42</height>
+          <font>font25_title</font>
+          <textcolor>white</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </itemlayout>
+      <focusedlayout width="344" height="150">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>327</width>
+          <height>145</height>
+          <texture border="21" colordiffuse="button_focus">buttons/button-fo.png</texture>
+        </control>
+        <control type="image">
+          <left>6</left>
+          <top>5</top>
+          <width>315</width>
+          <height>92</height>
+          <aspectratio>scale</aspectratio>
+          <texture background="true" fallback="$INFO[ListItem.Art(poster)]">$INFO[ListItem.Art(thumb)]</texture>
+        </control>
+        <control type="label">
+          <left>13</left>
+          <top>97</top>
+          <width>295</width>
+          <height>42</height>
+          <font>font25_title</font>
+          <textcolor>white</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </focusedlayout>
+      <content target="videos" limit="8">plugin://plugin.video.streambeast/?action=history&amp;widget=1</content>
+    </control>
+    <control type="button" id="303">
+      <left>100</left>
+      <top>695</top>
+      <width>343</width>
+      <height>50</height>
+      <label>Trakt watchlist</label>
+      <font>font27</font>
+      <textcolor>white</textcolor>
+      <focusedcolor>white</focusedcolor>
+      <align>left</align>
+      <aligny>center</aligny>
+      <textoffsetx>14</textoffsetx>
+      <onup>302</onup>
+      <ondown>201</ondown>
+      <onleft>303</onleft>
+      <onright condition="Integer.IsGreater(Container(403).NumItems,0)">403</onright>
+      <onclick>ActivateWindow(Videos,"plugin://plugin.video.streambeast/?action=watchlist",return)</onclick>
+      <texturefocus border="21" colordiffuse="button_focus">buttons/button-fo.png</texturefocus>
+      <texturenofocus border="21" colordiffuse="FF24232D">buttons/button-fo.png</texturenofocus>
+    </control>
+    <control type="list" id="403">
+      <left>100</left>
+      <top>752</top>
+      <width>1720</width>
+      <height>151</height>
+      <orientation>horizontal</orientation>
+      <onup>303</onup>
+      <ondown>201</ondown>
+      <onleft>303</onleft>
+      <onright>403</onright>
+      <scrolltime>160</scrolltime>
+      <itemlayout width="344" height="150">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>327</width>
+          <height>145</height>
+          <texture border="21" colordiffuse="FF2B2936">buttons/button-fo.png</texture>
+        </control>
+        <control type="image">
+          <left>6</left>
+          <top>5</top>
+          <width>315</width>
+          <height>92</height>
+          <aspectratio>scale</aspectratio>
+          <texture background="true" fallback="$INFO[ListItem.Art(poster)]">$INFO[ListItem.Art(thumb)]</texture>
+        </control>
+        <control type="label">
+          <left>13</left>
+          <top>97</top>
+          <width>295</width>
+          <height>42</height>
+          <font>font25_title</font>
+          <textcolor>white</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </itemlayout>
+      <focusedlayout width="344" height="150">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>327</width>
+          <height>145</height>
+          <texture border="21" colordiffuse="button_focus">buttons/button-fo.png</texture>
+        </control>
+        <control type="image">
+          <left>6</left>
+          <top>5</top>
+          <width>315</width>
+          <height>92</height>
+          <aspectratio>scale</aspectratio>
+          <texture background="true" fallback="$INFO[ListItem.Art(poster)]">$INFO[ListItem.Art(thumb)]</texture>
+        </control>
+        <control type="label">
+          <left>13</left>
+          <top>97</top>
+          <width>295</width>
+          <height>42</height>
+          <font>font25_title</font>
+          <textcolor>white</textcolor>
+          <label>$INFO[ListItem.Label]</label>
+        </control>
+      </focusedlayout>
+      <content target="videos" limit="8">plugin://plugin.video.streambeast/?action=watchlist&amp;widget=1</content>
+    </control>
+  </controls>
+</window>

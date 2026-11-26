@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <category label="30000">
+    <setting id="provider_1" type="text" label="30001" default=""/>
+    <setting id="provider_2" type="text" label="30002" default=""/>
+    <setting id="provider_3" type="text" label="30003" default=""/>
+    <setting id="provider_4" type="text" label="30004" default=""/>
+    <setting id="lookup_endpoint" type="text" label="30005" option="hidden" default=""/>
+  </category>
+  <category label="30010">
+    <setting id="rd_token" type="text" label="30011" option="hidden" default=""/>
+    <setting id="trakt_client" type="text" label="30012" default=""/>
+    <setting id="trakt_secret" type="text" label="30013" option="hidden" default=""/>
+    <setting id="trakt_connect" type="action" label="30014" action="RunPlugin(plugin://plugin.video.streambeast/?action=connect)" option="close"/>
+    <setting id="trakt_access" type="text" visible="false" default=""/>
+    <setting id="trakt_refresh" type="text" visible="false" default=""/>
+    <setting id="trakt_expiry" type="text" visible="false" default=""/>
+  </category>
+  <category label="30020">
+    <setting id="tmdb_token" type="text" label="30021" option="hidden" default=""/>
+    <setting id="watch_region" type="text" label="30022" default="US"/>
+    <setting id="stremio_1" type="text" label="30023" option="hidden" default=""/>
+    <setting id="stremio_2" type="text" label="30024" option="hidden" default=""/>
+    <setting id="stremio_3" type="text" label="30025" option="hidden" default=""/>
+    <setting id="coco_enabled" type="bool" label="30026" default="false"/>
+  </category>
+  <category label="30030">
+    <setting id="quality_cap" type="labelenum" label="30031" values="Auto|2160|1080|720" default="Auto"/>
+    <setting id="prefer_hdr" type="bool" label="30032" default="false"/>
+  </category>
+</settings>
